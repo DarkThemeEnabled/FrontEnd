@@ -10,36 +10,53 @@
     background-color: #EAAD16;
 }
 
-.titulo-nav
-{
-    display: flex;
-    align-items: center;
-}
+
 
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 10px;
 }
 
-.logo-nav {
-    height: 50px;
-    width: 45px;
+.titulo-nav
+{
+    display: flex;
+    justify-content: flex-start;
 }
+
+.titulo-nav a
+{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+.logo-nav {
+    height: 70px;
+    width: 70px;
+}
+
+.titulo-del-nav
+{
+    margin-top: 8px;
+    height: 34px;
+}
+
+
 
 .input-container-nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex: 1; /* Ocupará todo el espacio disponible */
-    max-width: 400px; /* Establece un ancho máximo */
+    float: center;
+    max-width: 400px;
     height: 30px;
     padding: 15px;
     border: #cf8610a4 2px solid;
     background-color: white;
     border-radius: 25px;
-    margin: 0 auto; /* Centra el input-container-nav */
+    margin: 0 auto;
+    
 }
 
 
@@ -60,19 +77,25 @@
 }
 
 .nav-login {
+    float: right;
     width: 90px;
+    border-radius: 15px;
+    padding: 5px;
+    transition: background-color 0.2s ease;
+    cursor:pointer;
 }
 
-.nav-login :hover
-{
-    border-radius: 15px;
-    background-color:  #cf8610a4;
+.nav-login a {
+    font-size: 16px;
 }
+
+.nav-login:hover {
+    background-color: #f4dc55; /* Color más claro al pasar el mouse */
+}
+
 
 .text-acceder
 {
     text-decoration: none;
     color: black;
-    outline: none;
-    border: none;
 }
