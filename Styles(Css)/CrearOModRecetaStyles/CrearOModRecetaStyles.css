@@ -5,3 +5,48 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.titulo-pagina-receta{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    user-select: none;
+}
+
+.general-container
+{
+    border: 1px black solid;
+    border-radius: 15px;
+}
+
+.general-container ul
+{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    list-style: none;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+.span-formulario
+{
+    font-size: 25px;
+    width: 200px;
+}
+
+.general-container ul > li 
+{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.formulario-creacion
+{
+    border-radius: 6px;
+    padding-left: 15px;
+    width: 550px;
+    font-size: 20px;
+    border: none;
+    border: 1px solid #ccc;
+}
+
