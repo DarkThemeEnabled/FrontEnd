@@ -5,3 +5,139 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.titulo-pagina-receta{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    user-select: none;
+}
+
+.subtitulos-pagina-receta
+{
+    user-select: none;
+    font-size: 35px;
+}
+
+
+/*  Estilos del section GENERALs */
+
+.container-formulario-general
+{
+    user-select: none;
+    margin-top: 50px;
+    list-style: none;
+    margin-bottom: 15px;
+}
+.div-tag-formulario
+{
+    font-size: 25px;
+    width: 230px;
+}
+
+.container-formulario-general > li
+{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.horario-container
+{
+    display: flex;
+    align-items: flex-end;
+}
+
+.horario-container a
+{
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.input-texto
+{
+    width: 550px;
+}
+
+.input-tags
+{
+    font-size: 20px;
+    padding-top: 2px;
+    padding-left: 8px;
+}
+.input-default-settings
+{
+
+    border: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 12px;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-hora {
+    margin-top: 8px;
+    height: 28px;
+    width: 50px;
+    padding-left: 3px;
+}
+
+.list-dificultad
+{
+    display: flex;
+    font-size: 20px;
+    width: 550px;
+}
+
+
+
+.submenu-filtro{
+    position: absolute;
+      background: rgb(48, 33, 33);
+      visibility: hidden;
+      opacity: 0;
+    border-radius: 5px;
+  }
+  
+  .submenu-filtro li a{
+      display: block;
+      padding: 15px;
+      color: rgba(255, 255, 255, 0.89);
+      font-family: 'Open sans';
+      text-decoration: none;
+  }
+  
+  .menu-filtro li:hover .submenu-filtro{
+      visibility: visible;
+      opacity: 1;
+  }
+
+
+
+  .container-filtrador{
+    width: 100%;
+  }
+  
+  .container-filtrador ul{
+      list-style: none;
+    padding-left: 1%;
+  }
+  
+  .menu-filtro > li{
+    display: flex;
+      position: relative;
+      display: inline-block;
+  }
+  
+  .menu-filtro > li > a{
+      display: block;
+      color: rgba(255, 255, 255, 0.89);
+      font-family: 'Open sans';
+      text-decoration: none;
+  }
+  
+  .menu-filtro li a:hover{
+      color: rgb(124, 124, 124);
+  }
