@@ -22,6 +22,14 @@
 
 /*  Estilos del section GENERALs */
 
+.general-container
+{
+    padding: 10px;
+    background-color: #fbf4c6; 
+    border: 1px black solid;
+    border-radius: 15px;
+}
+
 .container-formulario-general
 {
     user-select: none;
@@ -42,19 +50,6 @@
     padding-bottom: 25px;
 }
 
-.horario-container
-{
-    display: flex;
-    align-items: flex-end;
-}
-
-.horario-container a
-{
-    margin-bottom: 2px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 .input-texto
 {
     width: 550px;
@@ -68,76 +63,113 @@
 }
 .input-default-settings
 {
-
+    padding-left: 15px;
+    padding-right: 15px;
     border: none;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     border-bottom-right-radius: 12px;
-    background-color: transparent;
+    border-top-left-radius: 12px;
+    background-color: white;
     outline: none;
 }
 
-.input-hora {
-    margin-top: 8px;
-    height: 28px;
-    width: 50px;
-    padding-left: 3px;
+.horario-container
+{
+    display: flex;
+    align-items: flex-end;
 }
+
+.horario-container a
+{
+    font-size: 20px;
+    padding-right: 10px;
+
+}
+
+.input-hora {
+    font-size: 20px;
+    margin-top: 5px;
+    width: 35px;
+    border: none;
+    outline: none;
+}
+
+/* quita la flecha de desplazamiento del input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* DIFICULTADES */
 
 .list-dificultad
 {
     display: flex;
     font-size: 20px;
-    width: 550px;
+    padding: 0px;
+}
+
+.list-dificultad:hover
+{
+  border: 0px;
+  border-right: 1px black solid;
+  border-bottom-right-radius: 0px;
 }
 
 
 
-.submenu-filtro{
-    position: absolute;
-      background: rgb(48, 33, 33);
-      visibility: hidden;
-      opacity: 0;
-    border-radius: 5px;
+.menu-dificultad
+  {
+    width: 100%;
+    padding: 1px;
   }
-  
-  .submenu-filtro li a{
+
+  .menu-dificultad > li{
+    color: rgba(0, 0, 0, 0.696);
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+    margin-right: -2px;
+    margin-left: -1px;
+  }
+
+  .menu-dificultad > li > a{
       display: block;
-      padding: 15px;
-      color: rgba(255, 255, 255, 0.89);
-      font-family: 'Open sans';
+      color: rgba(101, 101, 101, 0.784);
       text-decoration: none;
+      padding-left: 15px;
   }
-  
-  .menu-filtro li:hover .submenu-filtro{
+
+  .menu-dificultad > li > a > i
+  {
+    margin-left: 10px;
+  }
+
+  .menu-dificultad li label:hover{
+      color: greenyellow
+  }
+
+.submenu-dificultad{
+    position: absolute;
+    visibility: hidden;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    opacity: 0;
+    border-bottom-right-radius: 12px;
+    list-style: none;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+  }
+
+  .menu-dificultad li:hover .submenu-dificultad{
       visibility: visible;
       opacity: 1;
   }
 
 
-
-  .container-filtrador{
-    width: 100%;
-  }
-  
-  .container-filtrador ul{
-      list-style: none;
-    padding-left: 1%;
-  }
-  
-  .menu-filtro > li{
-    display: flex;
-      position: relative;
-      display: inline-block;
-  }
-  
-  .menu-filtro > li > a{
-      display: block;
-      color: rgba(255, 255, 255, 0.89);
-      font-family: 'Open sans';
-      text-decoration: none;
-  }
-  
-  .menu-filtro li a:hover{
-      color: rgb(124, 124, 124);
-  }

@@ -15,94 +15,10 @@
     <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
     <main class="row" id="Main-CrearOModRec" >
         <div class="col-2"></div>
-        <div class="col-8" style="background-color: #f8ec8f3b;">
-            <h1 class="titulo-pagina-receta">CREACION DE RECETA</h1>
-            <section id="General" class="general-container">
-                <!-- Idea: Ponerle un iconito a cada coso para hacerlo más lindo visualmente -->
-                <!-- Idea 2: Ponerle algún coso que avise cuando un input es obligatorio -->
-                <h3 class="subtitulos-pagina-receta">Información general de la receta</h3>
-                <ul class="container-formulario-general">
-                    <!-- Idea general, poner un check para confirmar el nombre? O solo dejar el input y listo el pollo -->
-                    <li>
-                        <div class="div-tag-formulario">
-                            <i class="fa-solid fa-marker"></i>
-                            <span class="div-tag-formulario">TITULO:</span>
-                        </div>
-                        <input type="text" placeholder="Introducí el nombre de tu receta..." class="input-texto input-tags input-default-settings">
-                    </li>
-                    <li>
-                        <div class="div-tag-formulario">
-                            <i class="fa-solid fa-pencil"></i>
-                            
-                        <span class="div-tag-formulario">DESCRIPCIÓN:</span>
-                        </div>
-                        
-                        <textarea class="input-texto input-tags input-default-settings" rows="3" cols="50" placeholder="Describí aquí tu receta..."></textarea>
-
-                    </li>
-                    <li>
-                        <div class="div-tag-formulario ">
-                            <i class="fa-solid fa-chart-simple"></i>
-                            <span class="div-tag-formulario">DIFICULTAD:</span>
-                        </div>
-                        <div class="input-default-settings list-dificultad">
-                            <ul class="menu-filtro"> 
-                                <li>
-                                    <a>Seleccione una dificultad <i class="fa-solid fa-sort-down"></i></a>
-                                    <ul class="submenu-filtro">
-                                        <li>
-                                            facil
-                                        </li>
-                                        <li>
-                                            medio
-                                        </li>
-                                        <li>
-                                            dificil
-                                        </li>
-                                        <li>
-                                            Guanaco
-                                        </li>
-                                    </ul>
-                                </li>
-                                
-                                
-                            </ul>
-                           
-                        </div>
-                        <!-- Acá tengo que hacer que se habra una listita oculta con las 5 dificultades -->
-                    </li>
-                    <li>
-                        <div class="div-tag-formulario">
-                            <i class="fa-regular fa-clock"></i>
-                            <span >TIEMPO.PREP</span>
-                        </div>
-                        <div class="horario-container">
-                            <input type="number" class="input-default-settings input-hora " placeholder="HH">
-                            <a>HORAS,</a>
-                            <input type="number" class="input-default-settings input-hora " placeholder="MM">
-                            <a>MINUTOS</a>
-                        </div>
-                        
-                        <!-- No me gusta como queda el input, voy a buscar otra solución-->
-                    </li>
-                    <li>
-                        <div class="div-tag-formulario">
-                            <i class="fa-solid fa-camera"></i>
-                            <span class="div-tag-formulario">FOTO</span>
-                        </div>
-                        
-                        <input type="text" placeholder="Example: www.image.com/myimage.jpg" class="input-texto input-tags input-default-settings">
-                    </li>
-                    <li>
-                        <div class="div-tag-formulario">
-                            <i class="fa-solid fa-video"></i>
-                            <span class="div-tag-formulario">VIDEO</span>
-                        </div>
-                        <input type="text" placeholder="Example: www.youtube.com/myvideo1" class="input-texto input-tags input-default-settings">
-                    </li>
-                </ul>
-   
-            </section>
+        <div class="col-8">
+            <h1 class="titulo-pagina-receta">PUBLICAR RECETA</h1>
+            <!-- Idea 2: Ponerle algún coso que avise cuando un input es obligatorio -->
+            <section id="Formulario"> </section>
             <section id="Ingredientes">
                 <h3 class="subtitulos-pagina-receta">Ingredientes</h3>
                 <p>Cada lista de ingredientes va a ir acá :D</p>
@@ -135,5 +51,6 @@
         </div>
         <div class="col-2"></div>
     </main>
+    <script type="module" src="../../Compontents/CrearOModReceta/Fomulario/CargarGeneradores.js"></script>
 </body>
 </html>
