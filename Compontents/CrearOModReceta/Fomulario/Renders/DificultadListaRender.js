@@ -1,7 +1,7 @@
 export default function GenerarDificultades(dificultad) {
     const dificultadesLista = document.createElement('li');
     dificultadesLista.innerHTML = `
-                <label>- ${dificultad} </label>                  
+                - ${dificultad}                 
     `;
 
     return dificultadesLista;

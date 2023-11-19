@@ -2,12 +2,12 @@ export default function GenerarInfoGeneral() {
     const infoGeneral = document.createElement('div');
     infoGeneral.className = 'general-container';
     infoGeneral.innerHTML = `
-    <h3 class="subtitulos-pagina-receta">INFORMACIÓN GENERAL DE LA RECETA</h3>
+    <h3 class="subtitulos-pagina-receta">CONTANOS UN POCO DE TU RECETA</h3>
                 <ul class="container-formulario-general">
                     <li>
                         <div class="div-tag-formulario">
                             <i class="fa-solid fa-marker"></i>
-                            <span class="div-tag-formulario">TITULO:</span>
+                            <span class="div-tag-formulario">TÍTULO</span>
                         </div>
                         <input type="text" placeholder="Introducí el nombre de tu receta..." class="input-texto input-tags input-default-settings">
                     </li>
@@ -15,10 +15,10 @@ export default function GenerarInfoGeneral() {
                         <div class="div-tag-formulario">
                             <i class="fa-solid fa-pencil"></i>
                             
-                        <span class="div-tag-formulario">DESCRIPCIÓN:</span>
+                        <span class="div-tag-formulario">DESCRIPCIÓN</span>
                         </div>
                         
-                        <textarea class="input-texto input-tags input-default-settings" rows="3" cols="50" placeholder="Describí aquí tu receta..."></textarea>
+                        <textarea class="input-texto input-tags input-default-settings" rows="3" cols="50" placeholder="Describí aquí tu receta en general (los pasos e ingredientes los ingresarás más adelante)"></textarea>
 
                     </li>
                     <li>
@@ -28,20 +28,20 @@ export default function GenerarInfoGeneral() {
                         </div>
                         <div class="horario-container input-default-settings">
                             <input type="number" class="input-hora" placeholder="HH">
-                            <a> : </a>
+                            <span> : </span>
                             <input type="number" class="input-hora" placeholder="MM">
                         </div>
                     </li>
                     <li>
                         <div class="div-tag-formulario ">
                             <i class="fa-solid fa-chart-simple"></i>
-                            <span class="div-tag-formulario">DIFICULTAD:</span>
+                            <span class="div-tag-formulario">DIFICULTAD</span>
                         </div>
                         <div class="input-default-settings list-dificultad">
                             <ul class="menu-dificultad"> 
                                 <li>
-                                    <a>Seleccione una dificultad <i class="fa-solid fa-sort-down"></i></a>
-                                    <ul class="submenu-dificultad" id="lista-dificultades">
+                                    <span>Seleccione una dificultad <i class="fa-solid fa-sort-down"></i></span>
+                                    <ul class="general-submenu-settings submenu-dificultad" id="lista-dificultades">
                                     </ul>
                                 </li>
                             </ul>  
