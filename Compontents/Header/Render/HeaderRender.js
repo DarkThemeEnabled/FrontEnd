@@ -13,8 +13,10 @@ function GenerarHeader() {
                     </a>
                 </div>
                 <div class="input-container-nav">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="¿Qué te tienta preparar?" class="input-nav" id>
+                    <button type="button" id="icono-buscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text" placeholder="¿Qué te tienta preparar?" class="input-nav" id="barra-busqueda">
                 </div>
                 <div class="nav-login">
                     <a class="text-acceder">
@@ -32,3 +34,34 @@ function GenerarHeader() {
 const contenedor = document.getElementById('Nav');
 const header = GenerarHeader();
 contenedor.appendChild(header);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Obtener referencia al nuevo botón de búsqueda
+    const botonBusqueda = document.getElementById('icono-buscar');
+
+    // Obtener referencia al input de búsqueda
+    const inputBusqueda = document.getElementById('barra-busqueda');
+
+    // Agregar evento al nuevo botón de búsqueda
+    if (botonBusqueda) {
+        botonBusqueda.addEventListener('click', realizarBusqueda);
+    }
+
+    // Agregar evento para la tecla Enter en el input de búsqueda
+    if (inputBusqueda) {
+        inputBusqueda.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                realizarBusqueda();
+            }
+        });
+    }
+
+    // Función para realizar la búsqueda y redirigir
+    function realizarBusqueda() {
+        const textoBusqueda = inputBusqueda.value.trim();
+        if (textoBusqueda !== '') {
+            // Redirigir a la página BusquedaPers.html con el texto del buscador como parámetro
+            window.location.href = `../../Pages/PaginaBusqueda/BusquedaPers.html?texto=${encodeURIComponent(textoBusqueda)}`;
+        }
+    }
+});

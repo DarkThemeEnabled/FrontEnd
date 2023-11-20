@@ -1,0 +1,99 @@
+.contenedor-pagina {
+    display: flex;
+  }
+  
+  .contenedor-menu {
+    width: 25%;
+    padding: 20px;
+  }
+  
+  #contenedor-principal {
+    flex: 1;
+    padding: 20px; /* Ajusta según sea necesario */
+    box-sizing: border-box;
+    border-left: 2px solid #000; /* Línea de separación */
+  }
+
+  .superpuesto-categoria {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+}
+
+.superpuesto-dificultad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+}
+
+.contenedor-imagen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 350px; /* Límite de ancho para la imagen */
+    max-height: 240px; /* Límite de altura para la imagen */
+    object-fit: cover;
+}
+
+.fila-recetas {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos para cada receta */
+.contenedor-receta {
+  margin-bottom: 20px; /* Espaciado inferior entre recetas */
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+/*------------Menu de Busqueda-------------*/
+
+.filtro {
+  margin-top: 20px;
+}
+
+.filtro p {
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+
+.filtro hr {
+  border: 1px solid #000;
+  margin: 10px 0;
+}
+
+.opciones-filtro {
+  display: none;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  top: 0; /* Ajusta según tu diseño */
+  left: 0; /* Ajusta según tu diseño */
+}
+
+.opcion-filtro-item {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s;
+}
+
+.opcion-filtro-item:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el ratón por encima */
+}
+
+.opcion-filtro-item.seleccionado {
+  background-color: #e0e0e0; /* Color de fondo para la opción seleccionada */
+}
+
+.opciones-filtro.mostrar-opciones {
+  display: block;
+}

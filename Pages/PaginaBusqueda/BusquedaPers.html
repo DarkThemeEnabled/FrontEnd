@@ -7,10 +7,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="../../Styles(Css)/HeaderStyles/HeaderStyles.css"/>
     <link rel="stylesheet" href="../../Styles(Css)/General.css/GeneralStyles.css">
+    <link rel="stylesheet" href="../../Service/Receta/BusquedaPersStyles.css">
     <title>GASTRONET</title>
 </head>
 <body class="container-fluid">
     <header id="Nav"></header>
+    <!-- Contenido principal -->
+    <main class="contenedor-pagina">
+        <!-- Menú lateral -->
+        <section class="contenedor-menu">
+            <div class="filtro">
+                <p>Filtrar por</p>
+                <hr />
+                <div class="opcion-filtro" id="filtro-dificultad">
+                    <p>Dificultad</p>
+                    <div class="opciones-filtro" id="opciones-dificultad"></div>
+                </div>
+                <div class="opcion-filtro" id="filtro-tipo-receta">
+                    <p>Tipo de Receta</p>
+                    <div class="opciones-filtro" id="opciones-tipo-receta"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Filas de recetas -->
+        <section id="contenedor-principal"></section>
+    </main>
+
     <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
+    <script type="module" src="../../Service/Receta/visualizarTodasLasRecetas.js"></script>
+    <script type="module" src="../../Service/Receta/OpcionesDeFiltro.js"></script>
 </body>
 </html>
