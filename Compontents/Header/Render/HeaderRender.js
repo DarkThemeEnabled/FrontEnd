@@ -13,9 +13,9 @@ function GenerarHeader() {
                     </a>
                 </div>
                 <div class="input-container-nav">
-                    <button type="button" id="icono-buscar">
+                    <a href="../../Pages/PaginaBusqueda/BusquedaPers.html" type="button" id="icono-buscar">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                    </a>
                     <input type="text" placeholder="¿Qué te tienta preparar?" class="input-nav" id="barra-busqueda">
                 </div>
                 <div class="nav-login">

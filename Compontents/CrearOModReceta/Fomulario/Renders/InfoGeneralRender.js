@@ -22,14 +22,29 @@ export default function GenerarInfoGeneral() {
 
                     </li>
                     <li>
+                        <div class="div-tag-formulario ">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <span class="div-tag-formulario">CATEGORIA</span>
+                        </div>
+                        <div class="input-default-settings list-dificultad">
+                            <ul class="menu-dificultad"> 
+                                <li>
+                                    <span>Seleccione la categoria de la receta <i class="fa-solid fa-sort-down"></i></span>
+                                    <ul class="general-submenu-settings submenu-dificultad" id="lista-categoria">
+                                    </ul>
+                                </li>
+                            </ul>  
+                        </div>
+                    </li>
+                    <li>
                         <div class="div-tag-formulario">
                             <i class="fa-regular fa-clock"></i>
                             <span >TIEMPO.PREP</span>
                         </div>
                         <div class="horario-container input-default-settings">
-                            <input type="number" class="input-hora" placeholder="HH">
+                            <input type="number" class="input-hora input-hora-izquierda" placeholder="HH">
                             <span> : </span>
-                            <input type="number" class="input-hora" placeholder="MM">
+                            <input type="number" class="input-hora input-hora-derecha" placeholder="MM">
                         </div>
                     </li>
                     <li>

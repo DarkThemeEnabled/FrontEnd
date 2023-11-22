@@ -56,7 +56,7 @@
     width: 550px;
 }
 
-.input-tags
+/* .input-tags
 {
     font-size: 20px;
     padding-top: 2px;
@@ -71,7 +71,7 @@
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     background-color: white;
     outline: none;
-}
+} */
 
 .general-submenu-settings
 {
@@ -87,9 +87,9 @@
     border-left: 0px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding-top: 5px;
+    /* padding-top: 5px;
     padding-left: 15px;
-    padding-bottom: 5px;
+    padding-bottom: 5px; */
 }
 
 .general-submenu-settings li:hover{
@@ -107,16 +107,26 @@
 .horario-container span
 {
     font-size: 20px;
-    padding-right: 10px;
+    padding-right: 8px;
     vertical-align: middle;
 }
 
 .input-hora {
     font-size: 20px;
     margin-top: 5px;
-    width: 35px;
     border: none;
     outline: none;
+    width: 45px;
+}
+
+.input-hora-izquierda
+{
+    padding-left: 15px;
+}
+
+.input-hora-derecha
+{
+    margin-right: 10px;
 }
 
 /* quita la flecha de desplazamiento del input number */
@@ -152,8 +162,6 @@ color: rgba(0, 0, 0, 0.696);
 position: relative;
 display: inline-block;
 padding-right: 15px;
-margin-right: -2px;
-margin-left: -1px;
 }
 
 .menu-dificultad > li > span{
@@ -161,6 +169,7 @@ margin-left: -1px;
     color: rgba(101, 101, 101, 0.784);
     text-decoration: none;
     padding-left: 15px;
+    padding-right: 5px;
 }
 
 .menu-dificultad > li > a > i
@@ -169,13 +178,17 @@ margin-left: 10px;
 }
 
 .submenu-dificultad{
-    width: 99.5%;
+    z-index: 1;
+    padding: 0;
+    width: 100.2%;
 
 }
 
 .menu-dificultad li:hover .submenu-dificultad{
       visibility: visible;
       opacity: 1;
+      padding-left: 15px;
+      padding-top: 5px;
 }
 
 /* INGREDIENTES */
@@ -190,6 +203,7 @@ margin-left: 10px;
 {
     padding-top: 3px;
     padding-bottom: 25px;
+    padding-left: 0;
     display: flex;
     align-items: center;
 }
@@ -199,6 +213,7 @@ margin-left: 10px;
     padding-top: 3px;
     padding-bottom: 25px;
     align-items: center;
+    width: 550px;
 }
 
 .espacio-subir-bajar
@@ -238,6 +253,7 @@ margin-left: 10px;
 }
 
 .submenu-ingredientes {
+    z-index: 1;
     width: 550px;
 
 }
@@ -247,6 +263,21 @@ margin-left: 10px;
     opacity: 1;
 }
 
+.buscador-ingredientes:hover
+{
+    border: 0px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: white;
+}
 
+.quitar-padding
+{
+    padding: 0;
+    list-style: none;
+}
 
 
