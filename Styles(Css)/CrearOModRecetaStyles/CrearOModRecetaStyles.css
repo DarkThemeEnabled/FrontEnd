@@ -56,22 +56,6 @@
     width: 550px;
 }
 
-/* .input-tags
-{
-    font-size: 20px;
-    padding-top: 2px;
-    padding-left: 8px;
-}
-.input-default-settings
-{
-    padding-left: 15px;
-    padding-right: 15px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    outline: none;
-} */
 
 .general-submenu-settings
 {
@@ -87,9 +71,6 @@
     border-left: 0px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    /* padding-top: 5px;
-    padding-left: 15px;
-    padding-bottom: 5px; */
 }
 
 .general-submenu-settings li:hover{
@@ -174,7 +155,7 @@ padding-right: 15px;
 
 .menu-dificultad > li > a > i
 {
-margin-left: 10px;
+    margin-left: 10px;
 }
 
 .submenu-dificultad{
@@ -214,12 +195,13 @@ margin-left: 10px;
     padding-bottom: 25px;
     align-items: center;
     width: 550px;
+    display: flex;
 }
 
-.espacio-subir-bajar
+.ingrediente-subir-bajar
 {
     margin-left: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .ingrediente-widht
@@ -231,7 +213,7 @@ margin-left: 10px;
 .separador-nombre
 {
     width: 250px;
-    padding-right: 50px;
+    padding-left: 15px;
     overflow: hidden;
 }
 
@@ -261,9 +243,11 @@ margin-left: 10px;
 .ingredientes-lista li:hover .submenu-ingredientes{
     visibility: visible;
     opacity: 1;
+    padding-left: 15px;
+    padding-top: 5px;
 }
 
-.buscador-ingredientes:hover
+.input-default-settings:hover
 {
     border: 0px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -280,4 +264,31 @@ margin-left: 10px;
     list-style: none;
 }
 
+.cambio-formulario
+{
+    display: flex;
+    align-items: flex-end;
+}
 
+.cambio-formulario-dos-opciones
+{
+    justify-content: space-between;
+}
+
+.cambio-formulario-una-opcion
+{
+    justify-content: flex-end;
+}
+
+.cambio-formulario span:hover
+{
+    cursor: pointer;
+    user-select: none;
+    color: rgba(138, 139, 137, 0.596);
+}
+
+.icono
+{
+    padding-left: 20px;
+    font-size: 21px;
+}

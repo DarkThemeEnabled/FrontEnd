@@ -7,15 +7,15 @@ function GenerarHeader() {
         <div class="col-8" id="Nav">
             <div class="nav-container">
                 <div class="titulo-nav">
-                    <a href="../../index.html">
+                    <a href="../../index.html" class="quitar-color">
                         <img src="../../Assets/Img/LogoNav.png" alt="Logo Gastronet" class="logo-nav">
                         <h3 class="titulo-del-nav">GASTRONET</h3>
                     </a>
                 </div>
                 <div class="input-container-nav">
-                    <button type="button" id="icono-buscar">
+                <a href="../../Pages/PaginaBusqueda/BusquedaPers.html" type="button" id="icono-buscar">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                </a>
                     <input type="text" placeholder="¿Qué te tienta preparar?" class="input-nav" id="barra-busqueda">
                 </div>
                 <div class="nav-login">

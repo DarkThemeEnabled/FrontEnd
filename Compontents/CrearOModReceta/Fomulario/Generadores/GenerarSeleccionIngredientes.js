@@ -2,6 +2,7 @@ import GenerarListaIngredientes from "../Renders/IngredientesListaRender.js";
 import GetIngredienteByNameApi from "../../../../Service/Ingrediente/GetIngredienteByNameApi.js"
 
 async function CargarListaIngredientes(id,nombre) {
+    let limite=0;
     const seccionContenedora = document.getElementById(id);
     if (nombre !== null)
     {
@@ -9,11 +10,16 @@ async function CargarListaIngredientes(id,nombre) {
         seccionContenedora.innerHTML = '';
         if (ingredientes.length === 0) {
             const mensajeNoEncontrado = document.createElement('li');
-            mensajeNoEncontrado.textContent = 'NO HAY NINGÚN INGREDIENTE DISPONIBLE EN ESTE MOMENTO :(';
+            mensajeNoEncontrado.textContent = 'NINGÚN INGREDIENTE COINCIDE CON TU BÚSQUEDA :(';
             return seccionContenedora.appendChild(mensajeNoEncontrado);
         } else {
             for (const ingrediente of ingredientes) {
-                    seccionContenedora.appendChild(GenerarListaIngredientes(ingrediente));
+                    if (limite <= 10)
+                    {
+                        limite = limite + 1;
+                        seccionContenedora.appendChild(GenerarListaIngredientes(ingrediente));
+                    }
+                    
                 }
             }
     }

@@ -15,6 +15,10 @@ export default function GenerarIngredientes() {
                             </ul>                         
                         </li>   
                     </ul>
+    <div class="cambio-formulario cambio-formulario-dos-opciones">
+    <h5 > <span id="cambio-de-formulario"><i class="fa-solid fa-arrow-left"></i> VOLVER A INFO GENERAL</span> </h5>
+    <h5 > <span id="cambio-de-formulario">AGREGAR LOS PASOS <i class="fa-solid fa-arrow-right"></i> </span> </h5>
+    </div>
     `;
 
     return ingredientes;

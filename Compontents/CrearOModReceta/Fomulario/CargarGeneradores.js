@@ -6,11 +6,11 @@ import generarInputBusqueda from './Generadores/GenerarImputIngrediente.js';
 import generarListaIngredientes from './Generadores/GenerarSeleccionIngredientes.js';
 import generarSectionIngredientes from './Generadores/GenerarContainerIngrediente.js';
 
-cargaDeFormularioGeneral.Get('Formulario');
-await generarDificultades.Get('lista-dificultades');
-await generarCategorias.Get('lista-categoria');
+// cargaDeFormularioGeneral.Get('Formulario');
+// await generarDificultades.Get('lista-dificultades');
+// await generarCategorias.Get('lista-categoria');
 
-// generarIngredientes.Get('Formulario',false);
+// generarIngredientes.Get('Formulario',true);
 // generarInputBusqueda.Get('buscador-de-ingredientes');
 // await generarSectionIngredientes.Get('ingrediente-ya-seleccionado',10);
-// await generarListaIngredientes.Get('sublista-ingredientes','Cebolla');
+// await generarListaIngredientes.Get('sublista-ingredientes','A');

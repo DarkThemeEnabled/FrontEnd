@@ -23,7 +23,7 @@ export default function GenerarInfoGeneral() {
                     </li>
                     <li>
                         <div class="div-tag-formulario ">
-                            <i class="fa-solid fa-chart-simple"></i>
+                            <i class="fa-solid fa-shapes"></i>
                             <span class="div-tag-formulario">CATEGORIA</span>
                         </div>
                         <div class="input-default-settings list-dificultad">
@@ -38,7 +38,7 @@ export default function GenerarInfoGeneral() {
                     </li>
                     <li>
                         <div class="div-tag-formulario">
-                            <i class="fa-regular fa-clock"></i>
+                            <i class="fa-solid fa-stopwatch"></i>
                             <span >TIEMPO.PREP</span>
                         </div>
                         <div class="horario-container input-default-settings">
@@ -78,7 +78,7 @@ export default function GenerarInfoGeneral() {
                         <input type="text" placeholder="Example: www.youtube.com/myvideo1" class="input-texto input-tags input-default-settings">
                     </li>
                 </ul>
-    
+        <h5 class="cambio-formulario cambio-formulario-una-opcion"> <span id="cambio-de-formulario">AGREGAR INGREDIENTES <i class="fa-solid fa-arrow-right"></i> </span> </h5>
     `;
 
     return infoGeneral;

@@ -3,13 +3,14 @@ export default function GenerarContainerIngrediente(ingrediente) {
     containerIngrediente.className = 'ingrediente-seleccionado';
     containerIngrediente.innerHTML = `
     <div class="ingrediente-widht horario-container input-default-settings">
-        <span class="separador-nombre">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+        <span class="separador-nombre">${ingrediente.name}</span>
         <span class="separador-cantidad" >CANTIDAD:</span>
         <input type="number" class="input-cantidad" placeholder="Cant">
         <span> ${ingrediente.tipoMedida.name} </span>
     </div>
     <div class="ingrediente-subir-bajar">
-        <i class="fa-solid fa-x"> Borrar</i>
+        <i class="fa-solid fa-x"></i>
+        <span>BORRAR</span>
     </div>                        
     `;
 
