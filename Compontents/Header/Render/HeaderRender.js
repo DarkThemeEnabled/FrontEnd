@@ -13,13 +13,13 @@ function GenerarHeader() {
                     </a>
                 </div>
                 <div class="input-container-nav">
-                    <a href="../../Pages/PaginaBusqueda/BusquedaPers.html" type="button" id="icono-buscar">
+                    <button type="button" id="icono-buscar">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
+                    </button>
                     <input type="text" placeholder="¿Qué te tienta preparar?" class="input-nav" id="barra-busqueda">
                 </div>
                 <div class="nav-login">
-                    <a class="text-acceder">
+                    <a class="text-acceder" href="../../Pages/Auth/Login.html">
                         <i class="fa-solid fa-right-to-bracket"></i>
                         Acceder
                     </a>
