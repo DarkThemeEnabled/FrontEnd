@@ -1,14 +1,24 @@
 import sectionRender from '../Renders/IngredienteContainer.js'
 import GetIngredienteById from '../../../../Service/Ingrediente/GetIngredienteById.js'
 
-async function CargarIngredienteContainer(id,ingredienteId) {
+let listaRepetidos = [];
+
+async function CargarIngredienteContainer(id, ingredienteId) {
     const seccionContenedora = document.getElementById(id);
-    let ingrediente = await GetIngredienteById.Get(ingredienteId);
-    seccionContenedora.innerHTML = '';
-    if (ingrediente !== null) {
-        seccionContenedora.appendChild(sectionRender(ingrediente, ingrediente.name));
+
+    // Verificar si el ID del ingrediente ya está en la lista de repetidos
+    if (!listaRepetidos.includes(ingredienteId)) {
+        let ingrediente = await GetIngredienteById.Get(ingredienteId);
+        if (ingrediente !== null) {
+            listaRepetidos.push(ingredienteId);
+            seccionContenedora.appendChild(sectionRender(ingrediente, ingrediente.name));
+        }
+    } else {
+        console.log('El ingrediente con este ID ya está en la lista de repetidos');
+        // Realizar alguna acción o mostrar un mensaje indicando que ya está en la lista
     }
 }
+
 
 const listaContainerIngredientes  = {
     Get: CargarIngredienteContainer

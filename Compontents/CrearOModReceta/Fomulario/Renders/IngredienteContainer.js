@@ -9,10 +9,11 @@ export default function GenerarContainerIngrediente(ingrediente) {
         <span> ${ingrediente.tipoMedida.name} </span>
     </div>
     <div class="ingrediente-subir-bajar">
-        <i class="fa-solid fa-x"></i>
-        <span>BORRAR</span>
+        <i class="fa-solid fa-trash acomodar-iconos" id="borrar"></i>
+       
     </div>                        
     `;
 
     return containerIngrediente;
 };
+

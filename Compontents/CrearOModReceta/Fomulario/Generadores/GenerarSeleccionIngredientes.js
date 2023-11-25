@@ -8,7 +8,7 @@ async function CargarListaIngredientes(id,nombre) {
     {
         let ingredientes = await GetIngredienteByNameApi.Get(nombre);
         seccionContenedora.innerHTML = '';
-        if (ingredientes.length === 0) {
+        if (ingredientes === null) {
             const mensajeNoEncontrado = document.createElement('li');
             mensajeNoEncontrado.textContent = 'NINGÚN INGREDIENTE COINCIDE CON TU BÚSQUEDA :(';
             return seccionContenedora.appendChild(mensajeNoEncontrado);

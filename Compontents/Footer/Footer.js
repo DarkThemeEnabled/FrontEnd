@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="Footer" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../Styles(Css)/FooterStyles/FooterStyles.css">
-    <title>Footer</title>
-</head>
-<body>
-
-    <!-- FOOTER -->
-    <footer class="w-100" id="footer">
-        <div class="container">
+function GenerarFooter() {
+    const barraFooter = document.createElement('footer');
+    barraFooter.className = 'col-12 background';
+    barraFooter.innerHTML = `
+    <div class="container">
             <div class="row gy-4 gx-5">
                 <div class="col-lg-4 ">
                     <img src="../../Assets/img/LogoNav.png" alt="LogoNav" >
@@ -44,7 +34,10 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>  
-</body>
-</html>
+    </div>
+    `;
+    return barraFooter;
+}
+const contenedor = document.getElementById('Footer');
+const footer = GenerarFooter();
+contenedor.appendChild(footer);

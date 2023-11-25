@@ -8,26 +8,22 @@
     <link rel="stylesheet" href="../../Styles(Css)/HeaderStyles/HeaderStyles.css"/>
     <link rel="stylesheet" href="../../Styles(Css)/CrearOModRecetaStyles/CrearOModRecetaStyles.css">
     <link rel="stylesheet" href="../../Styles(Css)/General.css/GeneralStyles.css">
+    <link rel="stylesheet" href="../../Styles(Css)/FooterStyles/FooterStyles.css">
     <title>GASTRONET</title>
 </head>
 <body class="container-fluid">
     <header id="Nav"></header>
-    <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
+    
     <main class="row" id="Main-CrearOModRec" >
         <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-8 bordes">
             <h1 class="titulo-pagina-receta">PUBLICAR RECETA</h1>
             <!-- Idea 2: Ponerle algún coso que avise cuando un input es obligatorio -->
             <section id="Formulario"> </section>
-            <section id="Pasos">
-                <h3 class="subtitulos-pagina-receta">Pasos</h3>
-                <p>Orden</p>
-                <p>Descripcion</p>
-                <p>Foto</p>
-            </section>
-            <ul>
-                <li>
-                    <div class="div-tag-formulario">
+
+
+
+                    <!-- <div class="div-tag-formulario" style="margin-top: 500px;">
                         <i class="fa-solid fa-hashtag"></i>
                         <span class="div-tag-formulario">TOPICS</span>
                     </div>   
@@ -43,11 +39,13 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+                </ul> -->
         </div>
         <div class="col-2"></div>
     </main>
-    <!-- <script type="module" src="../../Compontents/CrearOModReceta/Fomulario/CargarGeneradores.js"></script> -->
+    <footer class="w-100" id="Footer"></footer>
+    <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
     <script type="module" src="../../Functions(js)/CrearOModRecetaFunctions/CrarOModRecetaFunctions.js"></script>
+    <script type="module" src="../../Compontents/Footer/Footer.js"></script>
 </body>
 </html>

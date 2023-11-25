@@ -5,6 +5,10 @@ const GetIngredienteByName = async (name) => {
     if (response.ok){
         result = await response.json();
     }
+    else
+    {
+        result = null;
+    }
     return result;
 }
 const ApiIngredienteByName = {

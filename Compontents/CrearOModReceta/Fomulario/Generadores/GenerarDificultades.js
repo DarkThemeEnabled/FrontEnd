@@ -13,7 +13,7 @@ async function CargarListaDificultades(id) {
         return seccionContenedora.appendChild(mensajeNoEncontrado);
     } else {
         for (const dificultad of dificultades) {
-                seccionContenedora.appendChild(dificultadesRender(dificultad.nombre));
+                seccionContenedora.appendChild(dificultadesRender(dificultad));
             }
         }
 }

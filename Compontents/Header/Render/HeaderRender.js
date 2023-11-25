@@ -1,4 +1,4 @@
-function GenerarHeader() {
+function GenerarFooter() {
     const barraHeader = document.createElement('nav');
     barraHeader.className = 'row nav-principal';
     barraHeader.innerHTML = `
@@ -32,7 +32,7 @@ function GenerarHeader() {
     return barraHeader;
 }
 const contenedor = document.getElementById('Nav');
-const header = GenerarHeader();
+const header = GenerarFooter();
 contenedor.appendChild(header);
 
 document.addEventListener('DOMContentLoaded', () => {
