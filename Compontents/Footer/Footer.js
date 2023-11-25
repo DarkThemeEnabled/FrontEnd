@@ -1,6 +1,6 @@
 function GenerarFooter() {
-    const barraFooter = document.createElement('footer');
-    barraFooter.className = 'col-12 background';
+    const barraFooter = document.createElement('div');
+    barraFooter.className = 'background';
     barraFooter.innerHTML = `
     <div class="container">
             <div class="row gy-4 gx-5">
