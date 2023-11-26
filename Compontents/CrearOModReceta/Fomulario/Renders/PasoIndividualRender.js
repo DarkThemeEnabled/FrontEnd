@@ -12,14 +12,14 @@ export default function GenerarPaso() {
                 <i class="fa-regular fa-pen-to-square"></i>
                 <span class="div-tag-formulario">DESCRIPCIÓN</span>
             </div>
-            <textarea class="input-texto input-tags input-default-settings" rows="3" cols="60" placeholder="Describí como preparar tu receta"></textarea>
+            <textarea class="input-texto input-tags input-default-settings" rows="3" cols="60" placeholder="Describí como preparar tu receta" id="descripcion-paso"></textarea>
         </div>
         <div class="elemento-paso">
                 <div class="div-tag-formulario">
                     <i class="fa-solid fa-camera-retro"></i>
                     <span class="div-tag-formulario">FOTO</span>
                 </div>
-                <input type="text" placeholder="Example: www.image.com/myimage.jpg" class="input-texto input-tags input-default-settings">
+                <input type="text" placeholder="Example: www.image.com/myimage.jpg" class="input-texto input-tags input-default-settings" id="foto-paso">
         </div>
     </li>
     <div class='acomodar-iconos'>

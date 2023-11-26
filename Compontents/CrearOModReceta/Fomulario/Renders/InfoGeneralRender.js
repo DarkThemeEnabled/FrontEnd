@@ -72,14 +72,21 @@ export default function GenerarInfoGeneral() {
                             <span class="div-tag-formulario">FOTO PORTADA</span>
                         </div>
                         
-                        <input type="text" placeholder="Example: www.image.com/myimage.jpg" class="input-texto input-tags input-default-settings">
+                        <input type="text" placeholder="Example: www.image.com/myimage.jpg" class="input-texto input-tags input-default-settings" id="foto-portada-receta">
                     </li>
                     <li>
                         <div class="div-tag-formulario">
                             <i class="fa-solid fa-video"></i>
                             <span class="div-tag-formulario">VIDEO</span>
                         </div>
-                        <input type="text" placeholder="Example: www.youtube.com/myvideo1" class="input-texto input-tags input-default-settings">
+                        <input type="text" placeholder="Example: www.youtube.com/myvideo1" class="input-texto input-tags input-default-settings" id="video-receta">
+                    </li>
+                    <li>
+                        <div class="div-tag-formulario">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <span class="div-tag-formulario">ETIQUETAS</span>
+                        </div>
+                        <input type="text" placeholder="Escribir entre guiones: pastas-sin sal-libre de gluten" class="input-texto input-tags input-default-settings" id="topics-receta">
                     </li>
                 </ul>
         <h5 class="cambio-formulario cambio-formulario-una-opcion"> <span id="cambio-a-ingredientes">AGREGAR INGREDIENTES<i class="fa-solid fa-arrow-right"></i> </span> </h5>
