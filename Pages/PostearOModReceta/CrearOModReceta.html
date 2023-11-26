@@ -8,76 +8,22 @@
     <link rel="stylesheet" href="../../Styles(Css)/HeaderStyles/HeaderStyles.css"/>
     <link rel="stylesheet" href="../../Styles(Css)/CrearOModRecetaStyles/CrearOModRecetaStyles.css">
     <link rel="stylesheet" href="../../Styles(Css)/General.css/GeneralStyles.css">
+    <link rel="stylesheet" href="../../Styles(Css)/FooterStyles/FooterStyles.css">
     <title>GASTRONET</title>
 </head>
 <body class="container-fluid">
     <header id="Nav"></header>
-    <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
+    
     <main class="row" id="Main-CrearOModRec" >
         <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-8 bordes">
             <h1 class="titulo-pagina-receta">PUBLICAR RECETA</h1>
             <!-- Idea 2: Ponerle algún coso que avise cuando un input es obligatorio -->
             <section id="Formulario"> </section>
-            <section id="Ingredientes" style="margin-top: 250px;">
-                <div class="general-container">
-                    <h3 class="subtitulos-pagina-receta">¿QUÉ INGREDIENTES LLEVA?</h3>
-                    <ul class="container-formulario-general">
-                        <li>
-                            <div class="div-tag-formulario">
-                                <i class="fa-solid fa-carrot"></i>
-                                <span class="div-tag-formulario">INGREDIENTE</span>
-                            </div>
-                            <ul class="ingredientes-lista">
-                                <li class="buscador-ingredientes">
-                                    <input type="text" placeholder="Introducí el nombre del ingrediente" class="input-texto input-tags input-default-settings">
-                                    <ul class="general-submenu-settings submenu-ingredientes">
-                                        <li>ZAPALLITOS</li>
-                                        <li>ZAPALLITOS</li>
-                                        <li>ZAPALLITOS</li>
-                                        <li>ZAPALLITOS</li>
-                                        <li>ZAPALLITOS</li>
-                                        <li>ZAPALLITOS</li>
-                                        <li>ZAPALLITOS</li>
-                                    </ul>
-                                    
-                                </li>
-                                <li class="ingrediente-lista ingrediente-seleccionado">
-                                        <div class="ingrediente-widht horario-container input-default-settings">
-                                            <span class="separador-nombre">ZANAHORIA</span>
-                                            <span class="separador-cantidad" >CANTIDAD:</span>
-                                            <input type="number" class="input-cantidad" placeholder="Cant">
-                                            <span> GRAMOS </span>
-                                        </div>
-                                        <div class="ingrediente-subir-bajar">
-                                            <i id="subir" class="fa-solid fa-chevron-up espacio-subir-bajar"></i>
-                                            <i id="bajar" class="fa-solid fa-chevron-down espacio-subir-bajar"></i>
-                                        </div>
-                                        
-                                </li>
-                                <!-- <li>
-                                    <div class="ingrediente-widht horario-container input-default-settings">
-                                        <span class="separador-nombre">TOMATE</span>
-                                        <span class="separador-cantidad">CANTIDAD:</span>
-                                        <input type="number" class="input-cantidad" placeholder="Cant">
-                                        <span> UNIDAD </span>
-                                    </div>
-                                    <i id="subir" class="fa-solid fa-chevron-up espacio-subir-bajar"></i>
-                                    <i id="bajar" class="fa-solid fa-chevron-down espacio-subir-bajar"></i>
-                                </li> -->
-                            </ul>   
-                        </li>
-                    </ul>
-            </section>
-            <section id="Pasos">
-                <h3 class="subtitulos-pagina-receta">Pasos</h3>
-                <p>Orden</p>
-                <p>Descripcion</p>
-                <p>Foto</p>
-            </section>
-            <ul>
-                <li>
-                    <div class="div-tag-formulario">
+
+
+
+                    <!-- <div class="div-tag-formulario" style="margin-top: 500px;">
                         <i class="fa-solid fa-hashtag"></i>
                         <span class="div-tag-formulario">TOPICS</span>
                     </div>   
@@ -93,10 +39,14 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+                </ul> -->
         </div>
         <div class="col-2"></div>
     </main>
-    <script type="module" src="../../Compontents/CrearOModReceta/Fomulario/CargarGeneradores.js"></script>
+    <footer class="row" id="Footer"></footer>
+    <script type="module" src="../../Compontents/Footer/Footer.js"></script>
+    <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
+    <script type="module" src="../../Functions(js)/CrearOModRecetaFunctions/CrarOModRecetaFunctions.js"></script>
+    <script type="module" src="../../Compontents/Footer/Footer.js"></script>
 </body>
 </html>

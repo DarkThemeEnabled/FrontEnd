@@ -8,6 +8,12 @@
 
 /* ESTILOS GENERALES */
 
+.bordes
+{
+    margin-bottom: 50px;
+    min-height: 625px;
+}
+
 .titulo-pagina-receta{
     display: flex;
     justify-content: center;
@@ -56,22 +62,6 @@
     width: 550px;
 }
 
-.input-tags
-{
-    font-size: 20px;
-    padding-top: 2px;
-    padding-left: 8px;
-}
-.input-default-settings
-{
-    padding-left: 15px;
-    padding-right: 15px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    outline: none;
-}
 
 .general-submenu-settings
 {
@@ -87,13 +77,90 @@
     border-left: 0px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding-top: 5px;
+}
+
+.corrector-sublistas{
+    min-width: 257px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-left: 15px;
-    padding-bottom: 5px;
+    padding-top: 2px;
+}
+
+.quitar-padding
+{
+    padding: 0;
+    list-style: none;
+}
+
+.cambio-formulario
+{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cambio-formulario-dos-opciones
+{
+    justify-content: space-between;
+}
+
+.cambio-formulario-una-opcion
+{
+    justify-content: flex-end;
+}
+
+/* HOVERS */ 
+
+#agregar-paso:hover
+{
+    background-color: #EAAD16;
+    cursor: pointer;
+}
+#borrar:hover
+{
+    cursor: pointer;
+    color: #EAAD16;
+}
+
+.acomodar-iconos i:hover
+{
+    cursor: pointer;
+    color: #EAAD16;
 }
 
 .general-submenu-settings li:hover{
-    color: rgba(138, 139, 137, 0.596)
+    color: #EAAD16;
+    cursor: pointer;
+}
+
+.list-dificultad:hover
+{
+  border: 0px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.menu-dificultad li:hover .submenu-acomodar{
+    visibility: visible;
+    opacity: 1;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+
+
+
+.cambio-formulario span:hover
+{
+    cursor: pointer;
+    user-select: none;
+    color: #EAAD16;
+    /* color: #5676ff; */
 }
 
 /*  Estilos del section INFO GENERAL */
@@ -107,16 +174,26 @@
 .horario-container span
 {
     font-size: 20px;
-    padding-right: 10px;
+    padding-right: 8px;
     vertical-align: middle;
 }
 
 .input-hora {
     font-size: 20px;
     margin-top: 5px;
-    width: 35px;
     border: none;
     outline: none;
+    width: 45px;
+}
+
+.input-hora-izquierda
+{
+    padding-left: 15px;
+}
+
+.input-hora-derecha
+{
+    margin-right: 10px;
 }
 
 /* quita la flecha de desplazamiento del input number */
@@ -133,14 +210,6 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 0px;
 }
 
-.list-dificultad:hover
-{
-  border: 0px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
 .menu-dificultad
 {
 width: 100%;
@@ -152,8 +221,6 @@ color: rgba(0, 0, 0, 0.696);
 position: relative;
 display: inline-block;
 padding-right: 15px;
-margin-right: -2px;
-margin-left: -1px;
 }
 
 .menu-dificultad > li > span{
@@ -161,22 +228,21 @@ margin-left: -1px;
     color: rgba(101, 101, 101, 0.784);
     text-decoration: none;
     padding-left: 15px;
+    padding-right: 5px;
 }
 
 .menu-dificultad > li > a > i
 {
-margin-left: 10px;
+    margin-left: 10px;
 }
 
-.submenu-dificultad{
-    width: 99.5%;
-
+.submenu-acomodar{
+    z-index: 1;
+    padding: 0;
+    width: 100.2%;
 }
 
-.menu-dificultad li:hover .submenu-dificultad{
-      visibility: visible;
-      opacity: 1;
-}
+
 
 /* INGREDIENTES */
 
@@ -190,6 +256,7 @@ margin-left: 10px;
 {
     padding-top: 3px;
     padding-bottom: 25px;
+    padding-left: 0;
     display: flex;
     align-items: center;
 }
@@ -199,12 +266,25 @@ margin-left: 10px;
     padding-top: 3px;
     padding-bottom: 25px;
     align-items: center;
+    width: 550px;
+    display: flex;
 }
 
-.espacio-subir-bajar
+.mostrar-sublista {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    align-items: center;
+    width: 550px;
+  }
+
+.ingrediente-subir-bajar
 {
     margin-left: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .ingrediente-widht
@@ -215,9 +295,11 @@ margin-left: 10px;
 
 .separador-nombre
 {
+    white-space: nowrap;
     width: 250px;
-    padding-right: 50px;
+    padding-left: 15px;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .separador-cantidad
@@ -238,15 +320,102 @@ margin-left: 10px;
 }
 
 .submenu-ingredientes {
+    z-index: 1;
     width: 550px;
-
 }
 
-.ingredientes-lista li:hover .submenu-ingredientes{
-    visibility: visible;
-    opacity: 1;
+.icono
+{
+    padding-left: 20px;
+    font-size: 21px;
 }
 
+.funciona-porfa
+{
+    border: none;
+    background-color: white;
+    outline: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
 
+/* PASOS */
 
+.elemento-paso
+{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+}
 
+.lista-pasos
+{
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.general-container li{
+    list-style: none;
+}
+
+.paso-individual
+{
+    margin: 15px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.454);
+    border-radius: 15px;
+    width: 1100px;
+}
+
+.container-paso
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    margin-right: 120px;
+    margin-bottom: 35px;
+}
+
+.div-agregar
+{
+    display: flex;
+    user-select: none;
+    height: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 210px;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-agregar span{
+    display: block;
+    text-decoration: none;
+    padding-left: 3px;
+}
+
+.acomodar-paso-div
+{
+    align-items: center;
+    display: flex;
+}
+
+.acomodar-iconos{
+    display: flex;
+    width: 30px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.acomodar-iconos i
+{
+    padding-top: 35px;
+    font-size: 24px;
+}

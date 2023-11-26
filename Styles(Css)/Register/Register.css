@@ -1,0 +1,86 @@
+.register-title {
+    text-align: center;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ajusta la altura para centrar verticalmente */
+}
+
+.form-container {
+    padding: 20px;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    max-width: 400px; /* O el ancho que prefieras */
+    margin: 2rem auto; /* Aumenta el margen superior para más espacio */
+}
+
+.btn {
+    background-color: #eaad16;
+    color: #fff;
+    display: block;
+    width: 200px; /* Ancho fijo para el botón */
+    margin: 1rem auto 0; /* Centra el botón y agrega margen superior */
+}
+
+.btn:hover {
+    background-color: #f6c343;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
+    max-width: 300px; /* El mismo ancho máximo que los campos de entrada */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%; /* Asegura que los inputs ocupen todo el ancho de .form-group */
+    margin-bottom: 0.5rem; /* Espacio debajo de cada input */
+}
+
+#signupForm {
+    margin: auto;
+    display: block;
+}
+
+.primary-button {
+    background-color: #eaad16; /* Color para el botón de acción principal */
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Ajuste el padding según sea necesario */
+    cursor: pointer;
+    margin-right: 10px; /* Espaciado entre los botones */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.secondary-button {
+    background-color: #cccccc; /* Color para el botón de acción secundaria, un gris claro por ejemplo */
+    color: #333;
+    border: none;
+    padding: 10px 20px; /* Ajuste el padding según sea necesario */
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.button-group {
+    display: flex;
+    justify-content:center;
+    padding: 30px 0 10px 0;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Asegúrate de que los botones tengan un ancho fijo o máximo para que sean del mismo tamaño */
+.primary-button, .secondary-button {
+    width: auto; /* Esto permite que los botones se ajusten al contenido */
+}
