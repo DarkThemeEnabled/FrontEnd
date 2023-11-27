@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="/Styles(Css)/HeaderStyles/HeaderStyles.css"/>
     <link rel="stylesheet" href="/Styles(Css)/General.css/GeneralStyles.css">
+    <!-- Incluye jwt-decode desde un CDN antes de tus scripts personalizados -->
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    
     <title>GASTRONET</title>
 </head>
 <body class="container-fluid">
     <header id="Nav"></header>
+    <script type="module" src="/Functions(js)/AuthFunctions/Logout.js"></script>
     <script type="module" src="/Compontents/Header/Render/HeaderRender.js"></script>
     <main class="row">
         <div class="col-2"></div>
