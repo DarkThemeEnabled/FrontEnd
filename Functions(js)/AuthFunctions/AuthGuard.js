@@ -39,22 +39,11 @@ function getUserData() {
 
 function protectRoute() {
     if (!isAuthenticated()) {
-        redirectToLogin();
-    }
-}
-
-function redirectToLogin() {
-    window.location.href = 'login.html';
-}
-
-function redirectToHome() {
-    window.location.href = 'index.html';
-}
-
-function protectUnauthenticatedRoute() {
-    if (isAuthenticated()) {
         redirectToHome();
     }
 }
+function redirectToHome() {
+    window.location.href = '/index.html';
+}
 
-export { getUserData, isAuthenticated, protectRoute, protectUnauthenticatedRoute };
+export { getUserData, isAuthenticated, protectRoute };

@@ -9,18 +9,21 @@ import borrarListaIngredientes from '../../Compontents/CrearOModReceta/Fomulario
 import generarSectorPasos from '../../Compontents/CrearOModReceta/Fomulario/Generadores/GenerarPasoGeneral.js';
 import generarPasoIndividual from  '../../Compontents/CrearOModReceta/Fomulario/Generadores/GenerarPasoIndividual.js';
 import PostRecetaApi from '../../Service/Receta/PostRecetaApi.js'
+import { protectRoute } from '../AuthFunctions/AuthGuard.js';
 
 //Variables globales almacenadora de datos
-let titulo=null;
-let descripcion=null;
-let categoriaId=null;
-let tiempoPrep=null;
-let dificultadId=null;
-let fotoPortada=null;
-let video=null;
-let ingredientes=[];
-let pasos=[];
-let topics=null;
+let tituloReceta=null;
+let descripcionReceta=null;
+let categoriaIdReceta=null;
+let tiempoPrepReceta=null;
+let dificultadIdReceta=null;
+let fotoPortadaReceta=null;
+let videoReceta=null;
+let listaResultados = [];
+let ingredientesReceta=[];
+let pasosReceta=[];
+let listaDePasos = [];
+let topicsReceta=null;
 
 //Variables para funcionamiento
 let QueCargo=1;
@@ -31,6 +34,7 @@ let contadorIngredientes = 0;
 
 
 document.addEventListener('DOMContentLoaded', async function () {
+    protectRoute();
     CargarFormularioInicial();
     document.body.addEventListener('click', async function (event) {
         const targetId = event.target.id;
@@ -81,6 +85,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         if(targetId === 'finalizar')
         {
             GuardadoDatosAutomatico(QueCargo);
+            comprobandoDatos();
             CrearReceta();
         }
     
@@ -284,11 +289,11 @@ function GuardarIdEnSuVariable(variableDondeGuardar,datoAGuardar)
 {
     if (variableDondeGuardar == 'categoriaId')
     {
-        categoriaId = datoAGuardar;
+        categoriaIdReceta = datoAGuardar;
     }
     if (variableDondeGuardar == 'dificultadId')
     {
-        dificultadId = datoAGuardar;
+        dificultadIdReceta = datoAGuardar;
     }
 }
 
@@ -300,23 +305,23 @@ async function GuardarInputs(id,AQueVariable)
 
     if (AQueVariable == 'titulo')
     {
-        titulo=valor;
+        tituloReceta=valor;
     }
     if (AQueVariable == 'descripcion')
     {
-        descripcion = valor
+        descripcionReceta = valor
     }
     if (AQueVariable == 'fotoPortada')
     {
-        fotoPortada = valor;
+        fotoPortadaReceta = valor;
     }
     if (AQueVariable == 'video')
     {
-        video = valor;
+        videoReceta = valor;
     }
     if (AQueVariable == 'topics')
     {
-        topics=ArmarStringTopicBack(valor);
+        topicsReceta=ArmarStringTopicBack(valor);
     }
 }
 
@@ -326,7 +331,7 @@ async function GuardarTiempoPrer()
     const MinutoReceta = document.getElementById('minuto-receta');
     if (HoraReceta.value != null && MinutoReceta.value != null)
     {
-        tiempoPrep = HoraReceta.value.toString() + ":" + MinutoReceta.value.toString();
+        tiempoPrepReceta = HoraReceta.value.toString() + ":" + MinutoReceta.value.toString();
     }
 
 }
@@ -336,30 +341,25 @@ async function GuardarIngredientesSeleccionados()
     const listaContenedora = document.getElementById('ingrediente-ya-seleccionado');
     const elementosLi = listaContenedora.querySelectorAll('.ingrediente-seleccionado');
 
-    const listaResultados = [];
-
     elementosLi.forEach(elementoLi => {
         const idDelIngrediente = elementoLi.querySelector('#ingrediente-nombre').getAttribute('value');
         const cantidadIngrediente = elementoLi.querySelector('.input-cantidad').value;
         
         const infoIngrediente = {
             ingredienteId: idDelIngrediente,
-            cantidad: cantidadIngrediente
+            cantidad: cantidadIngrediente,
         };
 
         listaResultados.push(infoIngrediente);
     });
 
-    ingredientes=listaResultados;
+    ingredientesReceta=listaResultados;
 }
 
 async function GuardarPasosSeleccionados()
 {
     const listaPasos = document.getElementById('lista-pasos');
     const elementosLi = listaPasos.querySelectorAll('.paso-individual');
-
-    const listaResultados = [];
-
     elementosLi.forEach((elementoLi, index) => {
         const descripcionPaso = elementoLi.querySelector('#descripcion-paso').value;
         const fotoPaso = elementoLi.querySelector('#foto-paso').value;
@@ -370,10 +370,10 @@ async function GuardarPasosSeleccionados()
             foto: fotoPaso
         };
 
-        listaResultados.push(infoPaso);
+        listaDePasos.push(infoPaso);
     });
 
-    pasos=listaResultados;
+    pasosReceta=listaDePasos;
 }
 
 async function GuardadoDatosAutomatico(QueAlmaceno)
@@ -393,23 +393,23 @@ async function GuardadoDatosAutomatico(QueAlmaceno)
     }
     if (QueAlmaceno == 3)
     {
-        CargarPasosSeleccionados();
+        GuardarPasosSeleccionados();
     }
     
 }
 
 function comprobandoDatos()
 {
-    console.log(titulo);
-    console.log(descripcion);
-    console.log(categoriaId);
-    console.log(tiempoPrep);
-    console.log(dificultadId);
-    console.log(fotoPortada);
-    console.log(video);
-    console.log(ingredientes);
-    console.log(pasos);
-    console.log(topics);
+    console.log(tituloReceta);
+    console.log(descripcionReceta);
+    console.log(categoriaIdReceta);
+    console.log(tiempoPrepReceta);
+    console.log(dificultadIdReceta);
+    console.log(fotoPortadaReceta);
+    console.log(videoReceta);
+    console.log(ingredientesReceta);
+    console.log(pasosReceta);
+    console.log(topicsReceta);
 }
 
 //CARGA DE DATOS
@@ -418,23 +418,23 @@ function CargarDatosFormulario(QueCargo)
 {
     if (QueCargo == 1)
     {
-        CargarDatoFormularioGeneral('titulo-receta',titulo);
-        CargarDatoFormularioGeneral('descripcion-receta',descripcion);
+        CargarDatoFormularioGeneral('titulo-receta',tituloReceta);
+        CargarDatoFormularioGeneral('descripcion-receta',descripcionReceta);
         
-        CargarDatoFormularioGeneral('foto-portada-receta',fotoPortada);
-        CargarDatoFormularioGeneral('video-receta',video);
-        CargarDatoFormularioGeneral('topics-receta',ArmarStringTopicFront(topics));
+        CargarDatoFormularioGeneral('foto-portada-receta',fotoPortadaReceta);
+        CargarDatoFormularioGeneral('video-receta',videoReceta);
+        CargarDatoFormularioGeneral('topics-receta',ArmarStringTopicFront(topicsReceta));
 
-        CargarDatoFormularioGeneral('hora-receta',Dividirhorario(tiempoPrep,true));
-        CargarDatoFormularioGeneral('minuto-receta',Dividirhorario(tiempoPrep,false));
+        CargarDatoFormularioGeneral('hora-receta',Dividirhorario(tiempoPrepReceta,true));
+        CargarDatoFormularioGeneral('minuto-receta',Dividirhorario(tiempoPrepReceta,false));
     }
     if (QueCargo == 2)
     {
-        CargarDatoIngredientes(ingredientes,'ingrediente-ya-seleccionado');
+        CargarDatoIngredientes(ingredientesReceta,'ingrediente-ya-seleccionado');
     }
     if (QueCargo == 3)
     {
-        GuardarPasosSeleccionados();
+        // GuardarPasosSeleccionados();
     }
 }
 function Dividirhorario(tiempoPrep,flag)
@@ -484,31 +484,21 @@ async function CargarPasosSeleccionados(pasos,id)
 //Enviar datos al backend
 async function CrearReceta()
 {
-    // let titulo=null;
-    // let descripcion=null;
-    // let categoriaId=null;
-    // let tiempoPrep=null;
-    // let dificultadId=null;
-    // let fotoPortada=null;
-    // let video=null;
-    // let ingredientes=[];
-    // let pasos=[];
-    // let topics=null;
     let response=null;
-    // console.log(ingredientes);
+
     const request = {
-        categoriaRecetaId: categoriaId,
-        dificultadId: dificultadId,
+        categoriaRecetaId: categoriaIdReceta,
+        dificultadId: dificultadIdReceta,
         usuarioId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-        titulo: titulo,
-        fotoReceta: fotoPortada,
-        video: video,
-        tiempoPreparacion: tiempoPrep,
-        topics: topics,
-        listaPasos: pasos,
-        listaIngredienteReceta: ingredientes,
+        titulo: tituloReceta,
+        descripcion: descripcionReceta,
+        fotoReceta: fotoPortadaReceta,
+        video: videoReceta,
+        tiempoPreparacion: tiempoPrepReceta,
+        topics: topicsReceta,
+        listaPasos: pasosReceta,
+        listaIngredienteReceta: ingredientesReceta,
       };
-      //Hacer que redirija a la página del posteo
     response=await PostRecetaApi.Post(request)
     console.log(response);
 }
