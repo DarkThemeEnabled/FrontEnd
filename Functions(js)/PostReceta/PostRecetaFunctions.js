@@ -6,8 +6,16 @@ import GenerarComentarios from '../../Compontents/PostReceta/Generadores/Generar
 import GetRecetaByIdApi from '../../Service/Receta/GetRecetaById.js'
 import GenerarInfoCaracteristicas from '../../Compontents/PostReceta/Generadores/GenerarInformacionIndividual.js';
 import GenerarIngredientesIndividual from '../../Compontents/PostReceta/Generadores/GenerarIngredienteIndividual.js'
+import GenerarPasoIndividual from '../../Compontents/PostReceta/Generadores/GenerarPasoIndividual.js';
 
-let ApiReceta = await GetRecetaByIdApi.GetCategorias('005472c6-c357-4410-0810-08dbef56a8fa');
+// Obtener el valor del parámetro 'id' de la URL
+const parametros = new URLSearchParams(window.location.search);
+const idReceta = parametros.get('id');
+
+console.log('ID de receta obtenido de la URL:', idReceta);
+// Utilizar el valor de idReceta según sea necesario en esta página
+
+let ApiReceta = await GetRecetaByIdApi.GetCategorias(idReceta);
 console.log(ApiReceta);
 
 //Generador de la pagina
@@ -21,4 +29,5 @@ GenerarIngredientes.Get('ingredientes-receta');
 GenerarIngredientesIndividual.Get('ingredientes-individuales',ApiReceta.ingredientes)
 
 GenerarPasos.Get('pasos-receta',ApiReceta);
+GenerarPasoIndividual.Get('pasos-individuales',ApiReceta.pasos);
 GenerarComentarios.Get('Comentarios',ApiReceta);
