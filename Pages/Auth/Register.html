@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../Styles(Css)/HeaderStyles/HeaderStyles.css"/>
     <link rel="stylesheet" href="../../Styles(Css)/Register/Register.css"/>
     <link rel="stylesheet" href="../../Styles(Css)/General.css/GeneralStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>GASTRONET</title>
 </head>
 <body class="container-fluid">
@@ -42,6 +43,9 @@
                 <div class="form-group">
                     <label for="password" class="form-label">Contraseña*</label>
                     <input type="password" class="form-control input-default-settings" id="password" placeholder="Crea una contraseña" required>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                        <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+                    </button>
                 </div>
                 <div class="form-group">
                     <label for="photo" class="form-label">Foto de Perfil</label>
@@ -64,5 +68,21 @@
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script type="module" src="../../Functions(js)/AuthFunctions/AuthGuard.js"></script>
     <script type="module" src="../../Functions(js)/AuthFunctions/Register.js"></script>
+
+    <script>
+        function togglePasswordVisibility() {
+        var passwordInput = document.getElementById('password');
+        var toggleIcon = document.getElementById('togglePasswordIcon');
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleIcon.classList.remove('fa-eye');
+          toggleIcon.classList.add('fa-eye-slash');
+        } else {
+          passwordInput.type = 'password';
+          toggleIcon.classList.add('fa-eye');
+          toggleIcon.classList.remove('fa-eye-slash');
+        }
+      }     
+      </script>
 </body>
 </html>
