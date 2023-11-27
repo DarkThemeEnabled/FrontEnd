@@ -34,13 +34,14 @@ let contadorIngredientes = 0;
 
 
 document.addEventListener('DOMContentLoaded', async function () {
-    protectRoute();
+    // protectRoute();
     CargarFormularioInicial();
     document.body.addEventListener('click', async function (event) {
         const targetId = event.target.id;
  
         if (targetId === 'cambio-a-ingredientes') {
                 await GuardadoDatosAutomatico(QueCargo);
+                comprobandoDatos();
                 QueCargo=2
                 await CargarElementosIngredientesConSeleccion();
                 CargarDatosFormulario(QueCargo);
@@ -500,5 +501,8 @@ async function CrearReceta()
         listaIngredienteReceta: ingredientesReceta,
       };
     response=await PostRecetaApi.Post(request)
-    console.log(response);
+    const idReceta = await response.id;
+    window.location.href = `../../Pages/PostReceta/PostDeReceta.html?id=${idReceta}`;
+
+
 }

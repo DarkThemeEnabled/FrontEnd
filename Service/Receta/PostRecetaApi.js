@@ -20,11 +20,11 @@ const crearReceta = async (request) =>
     });
     if (response.ok)
     {
-      const resultado = await response.text();
+      const resultado = await response.json();
       return resultado;
     }
     else {
-      console.log('no funca');
+      alert('Hubo un error, pruebe nuevamente');
     }
 }
 
