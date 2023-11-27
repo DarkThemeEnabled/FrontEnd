@@ -86,3 +86,32 @@ a {
 .primary-button, .secondary-button {
     width: auto; /* Esto permite que los botones se ajusten al contenido */
 }
+/* Estilo general del contenedor del campo de contraseña */
+.form-group {
+    position: relative; /* Este es necesario para posicionar el botón del ojo absolutamente dentro de este contenedor */
+  }
+  
+  /* Estilos para el campo de entrada de la contraseña */
+  .form-control.input-default-settings {
+    padding-right: 40px; /* Añade espacio a la derecha para el botón del ojo */
+    /* Tus otros estilos para el campo de entrada */
+  }
+  
+  /* Estilos para el botón de mostrar/ocultar contraseña */
+  .toggle-password {
+    position: absolute;
+    right: 10px; /* Ajusta según el tamaño de tu campo de entrada */
+    top: 65%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  /* Asegúrate de que el ícono del ojo se vea correctamente */
+  .toggle-password i {
+    color: #495057; /* Cambia este color según necesites para que combine con el diseño de tu campo de entrada */
+    /* Agrega cualquier otro estilo que necesites para el ícono aquí */
+  }
+  

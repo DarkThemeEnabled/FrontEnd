@@ -6,10 +6,7 @@
 	box-sizing: border-box;
     
 }
-#imagenprincipal{
-	height: 500px;
-	width: 100%;
-}
+
 #imagenprincipal img{
 	
 	width:100%;
@@ -28,7 +25,8 @@ h5{
 	padding-top: 0px; ;
 }
 .card{
-	
+	margin-top: 35px;
+	margin-bottom: 50px;
 	background-color: #fff;
 	border: none;
 }
@@ -81,4 +79,152 @@ h5{
 
 	    font-size: 14px;
 	    margin-top: 12px;
+}
+
+
+
+
+/* CREADSA POR MI */
+
+#imagen-principal{
+	margin-top: 15px;
+	height: 400px;
+	width: 600px;
+	border-radius: 15px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container-receta
+{
+	margin-top: 30px;
+	padding: 20px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.container-img-car
+{
+	display: flex;
+	margin-top: 15px;
+}
+
+.container-caracteristicas
+{
+	margin-top: 15px;
+}
+
+.container-caracteristicas ul
+{
+	list-style: none;
+	padding-left: 20px;
+}
+
+
+.flex-informacion
+{
+	font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+	margin-bottom: 15px;
+}
+
+.separar
+{
+	width: 120px;
+	padding-right: 48px;
+	font-weight: bold;
+}
+
+.acomodar-texto
+{
+	text-align: justify;
+}
+
+.container-ingredientes
+{
+	margin-top: 20px;
+}
+
+.container-ingredientes ul	
+{
+	list-style: none;
+	padding-left: 13px;
+	padding-top: 15px;
+}
+
+.container-ingredientes ul > li 
+{
+	display: flex;
+	width: 800px;
+}
+
+.check-ingrediente
+{	
+	font-size: 25px;
+}
+.check-ingrediente input
+{
+	border: 1px solid black;
+}
+
+
+.container-del-ingrediente
+{
+	font-size: 16px;
+	margin-bottom: 15px;
+	width: 600px;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+	display: flex;
+	justify-content: space-between;
+	text-overflow: hidden;
+}
+
+.container-del-paso
+{
+	padding: 20px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+	margin-bottom: 15px;
+}
+
+.borrar-list-style
+{
+	list-style: none;
+}
+
+.imagen-paso
+{
+	padding-top: 15px;
+	border-radius: 5px;
+	height: 250px;
+	width: auto;
+}
+
+.descripcion-paso
+{
+	padding-top: 15px;
+	text-align: justify;
+}
+
+.acomodar-iconos
+{
+	padding-left: 15px;
+	display: flex;
+	align-items: center;
+}
+
+.acomodar-iconos i{
+	font-size: 24px;
+	padding-bottom: 5px;
+	margin-right: 10px;
+}
+
+#PostReceta
+{
+	margin-bottom: 50px;
 }
