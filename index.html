@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="/Styles(Css)/HeaderStyles/HeaderStyles.css"/>
     <link rel="stylesheet" href="/Styles(Css)/General.css/GeneralStyles.css">
+    <link rel="stylesheet" href="/Styles(Css)/IndexStyles/Styles.css">
     <!-- Incluye jwt-decode desde un CDN antes de tus scripts personalizados -->
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     
@@ -15,6 +16,42 @@
 </head>
 <body class="container-fluid">
     <header id="Nav"></header>
+
+    <section class="search-container">
+        <div class="background-box">
+            <!-- Contenido del recuadro blanco -->
+        <h1>¿Qué te tienta preparar?</h1>
+        <p>Descubre deliciosas recetas de todo el mundo, confeccionadas con cariño por nuestros apasionados usuarios.</p>
+        <div class="search-wrapper">
+            <input type="text" id="campoBusqueda" placeholder="Ingresa tu búsqueda...">
+            <button id="botonBuscar"><i class="fas fa-search"></i></button>
+        </div>
+            <!-- Puedes agregar más elementos según sea necesario -->
+        </div>
+    </section>
+
+    <section class="category-container">
+        <h2>Categorías Populares</h2>
+        <div class="category-images">
+            <div class="category-item pasta-category">
+                <img src="Assets/Img/pasta.jpg" alt="Pasta">
+                <div class="category-text">Pasta</div>
+            </div>
+            <div class="category-item ensalada-category">
+                <img src="Assets/Img/ensalada.jpg" alt="Ensaladas">
+                <div class="category-text">Ensaladas</div>
+            </div>
+            <div class="category-item postre-category">
+                <img src="Assets/Img/postre.jpg" alt="Postres">
+                <div class="category-text">Postres</div>
+            </div>
+            <div class="category-item bebida-category">
+                <img src="Assets/Img/bebida.jpg" alt="Bebidas">
+                <div class="category-text">Bebidas</div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="indexeventos.js"></script>
     <script type="module" src="/Functions(js)/AuthFunctions/Logout.js"></script>
     <script type="module" src="/Compontents/Header/Render/HeaderRender.js"></script>
     <main class="row">
@@ -22,5 +59,7 @@
         <div class="col-8"></div>
         <div class="col-2"></div>
     </main>
+
+    
 </body>
 </html>

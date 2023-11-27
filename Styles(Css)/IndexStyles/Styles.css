@@ -1,0 +1,81 @@
+.search-container {
+    text-align: center;
+    padding: 50px 0; /* Puedes ajustar el espaciado vertical según sea necesario */
+}
+
+.search-container h1 {
+    margin-bottom: 20px; /* Puedes ajustar el margen inferior según sea necesario */
+}
+
+.search-container {    
+    background: url("../../Assets/Img/fondo-index.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-box {
+    width: 800px; /* Cambia el ancho del contenedor blanco */
+    height: 250px; /* Cambia la altura del contenedor blanco */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.category-container {
+    margin-top: 80px; /* Aumenté la separación entre secciones */
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px; /* Aumenté el espacio después del título */
+}
+
+.category-images {
+    display: flex;
+    justify-content: space-around; /* Ajustado para acercar más las imágenes */
+}
+
+.category-item {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-item img {
+    margin-top: 20px;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.category-item:hover {
+    transform: scale(1.1); /* Efecto de zoom hacia adentro en el hover */
+}
+
+.category-text {
+    position: absolute;
+    bottom: 10px; /* Ajusté la posición hacia abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.category-item:hover .category-text {
+    transform: scale(1.1) translateX(-50%); /* Efecto de zoom centrado hacia adentro en el hover */
+    opacity: 1; /* Hacer el texto completamente visible en el hover */
+}

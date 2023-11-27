@@ -28,8 +28,9 @@ async function visualizarTodasLasRecetas(tituloIngrediente, dificultad, categori
 
             recetaElemento.addEventListener('click', () => {
                 const recetaId = recetaElemento.dataset.recetaId;
+                console.log(recetaId)
                 // Redirige a la página deseada con el ID de la receta como parámetro
-                window.location.href = "../../Pages/PostReceta/PostDeReceta.html";
+                window.location.href = `../../Pages/PostReceta/PostDeReceta.html?id$=${recetaId}`;
             });
         });
 
@@ -41,11 +42,23 @@ async function visualizarTodasLasRecetas(tituloIngrediente, dificultad, categori
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Obtener el parámetro de búsqueda del URL
-    const params = new URLSearchParams(window.location.search);
-    const textoBusqueda = params.get('texto');
-    // Llamar a la función para obtener y visualizar las recetas con el texto de búsqueda
-    await visualizarTodasLasRecetas(textoBusqueda, 0, 0);
+    // Obtén los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Obtén el texto de búsqueda, o utiliza un valor predeterminado si no se proporciona
+    const textoBusqueda = urlParams.get('texto') || 'defaultTexto';
+    
+    // Obtén los dos números, o utiliza valores predeterminados si no se proporcionan
+    const numero1 = parseInt(urlParams.get('numero1')) || 0;
+    const numero2 = parseInt(urlParams.get('numero2')) || 0;
+
+    // Lógica basada en los parámetros
+    console.log("Texto de búsqueda:", textoBusqueda);
+    console.log("Número 1:", numero1);
+    console.log("Número 2:", numero2);
+
+    // Llama a la función para obtener y visualizar las recetas con los parámetros
+    await visualizarTodasLasRecetas(textoBusqueda, numero1, numero2);
 });
 
 export {visualizarTodasLasRecetas};

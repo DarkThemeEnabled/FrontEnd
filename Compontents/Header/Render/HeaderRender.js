@@ -31,40 +31,10 @@
 //     `;
 //     return barraHeader;
 // }
+
 // const contenedor = document.getElementById('Nav');
 // const header = GenerarHeader();
 // contenedor.appendChild(header);
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     // Obtener referencia al nuevo botón de búsqueda
-//     const botonBusqueda = document.getElementById('icono-buscar');
-
-//     // Obtener referencia al input de búsqueda
-//     const inputBusqueda = document.getElementById('barra-busqueda');
-
-//     // Agregar evento al nuevo botón de búsqueda
-//     if (botonBusqueda) {
-//         botonBusqueda.addEventListener('click', realizarBusqueda);
-//     }
-
-//     // Agregar evento para la tecla Enter en el input de búsqueda
-//     if (inputBusqueda) {
-//         inputBusqueda.addEventListener('keydown', (event) => {
-//             if (event.key === 'Enter') {
-//                 realizarBusqueda();
-//             }
-//         });
-//     }
-
-//     // Función para realizar la búsqueda y redirigir
-//     function realizarBusqueda() {
-//         const textoBusqueda = inputBusqueda.value.trim();
-//         if (textoBusqueda !== '') {
-//             // Redirigir a la página BusquedaPers.html con el texto del buscador como parámetro
-//             window.location.href = `../../Pages/PaginaBusqueda/BusquedaPers.html?texto=${encodeURIComponent(textoBusqueda)}`;
-//         }
-//     }
-// });
 
 import { isAuthenticated, getUserData } from '../../../Functions(js)/AuthFunctions/AuthGuard.js';
 
@@ -140,6 +110,38 @@ document.addEventListener('DOMContentLoaded', function() {
     contenedor.appendChild(header);
 
     ModificarNavLogin(); // Modifica la sección de 'Acceder' si el usuario está autenticado
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Obtener referencia al nuevo botón de búsqueda
+    const botonBusqueda = document.getElementById('icono-buscar');
+
+    // Obtener referencia al input de búsqueda
+    const inputBusqueda = document.getElementById('barra-busqueda');
+
+    // Agregar evento al nuevo botón de búsqueda
+    if (botonBusqueda) {
+        botonBusqueda.addEventListener('click', realizarBusqueda);
+    }
+
+    // Agregar evento para la tecla Enter en el input de búsqueda
+    if (inputBusqueda) {
+        inputBusqueda.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                realizarBusqueda();
+            }
+        });
+    }
+
+    // Función para realizar la búsqueda y redirigir
+    function realizarBusqueda() {
+        const textoBusqueda = inputBusqueda.value.trim();
+        if (textoBusqueda !== '') {
+            // Redirigir a la página BusquedaPers.html con el texto del buscador como parámetro
+            window.location.href = `../../Pages/PaginaBusqueda/BusquedaPers.html?texto=${encodeURIComponent(textoBusqueda)}`;
+        }
+    }
 });
 
 function toggleDropdown(event) {

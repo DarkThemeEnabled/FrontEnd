@@ -132,3 +132,8 @@
 .opcion-filtro-item label {
   cursor: pointer;
 }
+
+.titulo.centrado-debajo {
+  text-align: center;
+  margin-top: 10px;
+}
