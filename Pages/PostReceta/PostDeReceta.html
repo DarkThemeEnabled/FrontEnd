@@ -8,37 +8,108 @@
     <link rel="stylesheet" type="text/css" href="../../Styles(Css)/HeaderStyles/HeaderStyles.css"/>
     <link rel="stylesheet" href="../../Styles(Css)/General.css/GeneralStyles.css">
     <link rel="stylesheet" href="../../Styles(Css)/PostRecetaStyles/PostDeRecetaStyles.css">
+    <link rel="stylesheet" href="../../Styles(Css)/FooterStyles/FooterStyles.css">
     <title>GASTRONET</title>
 </head>
 <body>
     <header id="Nav"></header>
-    <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
+    
     <main class="row">
         <div class="col-2"></div>
-        <div class="col-8">
-            <div class="container" id="imagenprincipal">
-                <img src="../../Assets/Img/Logo.png" alt="imagenprincipal">
-            </div>
-           <h1 class="display-1 text-center"> Ejemplo Receta</h1>
+        <div class="col-8" id="PostReceta">
+            <div class="container-receta row">
+                <h1> PIZZA COMO LAS QUE HACIA MI ABUELA</h1>
+                <div class="row container-img-car" id="foto-caracteristicas-receta">
+                   <div class="col-6 container-imagen">
+                        <img src="../../Assets/Img/Rice-Pizza-Crust.jpg" alt="imagenprincipal" id="imagen-principal">
+                   </div>
+                   <div class="col-6 container-caracteristicas" id="informacion">
+                        <ul>
+                            <li>
+                                <div class="flex-informacion">
+                                    <span class="separar">TOPICS:</span>
+                                    <span class="acomodar-texto"> #VEGANO</span>
+                                    <span class="acomodar-texto">#CARNES</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-informacion">
+                                    <span class="separar">DIFICULTAD:</span>
+                                    <span class="acomodar-texto">MEDIA</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-informacion">
+                                    <span class="separar">DURACION:</span>
+                                    <span class="acomodar-texto">1HORA Y 30 MINUTOS</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-informacion">
+                                    <span class="separar">CATEGORIA:</span>
+                                    <span class="acomodar-texto">CARNES</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-informacion">
+                                    <span class="separar">DESCRIPCION:</span>
+                                    <span class="acomodar-texto">No importa si hace frío o llueve, la sopa de pasta siempre es la mejor opción para la comida y la cena, pues tiene ese sabor casero e inigualable. Además, esta receta de sopa aguada es fácil, económica y muy rendidora, ¡será un éxito en casa!
 
-           <div class="ingredientescontainer">
-                <p>Ingredientes</p>
-                <ul class="list-group">
-                    <li class="list-group-item">Ingrediente1</li>
-                    <li class="list-group-item">Ingrediente2</li>
-                    <li class="list-group-item">Ingrediente3</li>
-                    <li class="list-group-item">Ingrediente4</li>
-                </ul>
-           </div>
-           <div class="pasoscontainer">
-                <p>Pasos</p>
-                <ul class="list-group">
-                    <li class="list-group-item">Paso1</li>
-                    <li class="list-group-item">Paso2</li>
-                    <li class="list-group-item">Paso3</li>
-                    <li class="list-group-item">Paso5</li>
-                </ul>
-           </div>
+                                        Si no tienes tiempo para cocinar platillos elaborados, no te preocupes y prepara esta sopa aguada y acompaña con quesadillas, ¡está para chuparse los dedos!
+                                        
+                                        ¿Sabías qué? En México, la sopa de pasta también se conoce como sopa aguada y se prepara con sopa de fideos, de municiones o de letras</span>
+                                </div>
+                            </li>
+                        </ul>
+                   </div>
+                </div>
+                <div class="row col-6 container-ingredientes" id="ingredientes-receta">
+                    <div class="acomodar-iconos">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                        <h3>INGREDIENTES</h3>
+                    </div>
+                    
+                    <ul>
+                        <li>
+                            <div class="form-check check-ingrediente">
+                                <input class="form-check-input checkisto " type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                            <div class="container-del-ingrediente">
+                                <span>ACEITE DE OLIVA EXTRA VIRGEN</span>
+                                <span>CANTIDAD: 45 LITROS</span>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="row" id="pasos-receta container-pasos">
+                    <div class="acomodar-iconos">
+                        <i class="fa-solid fa-list"></i>
+                        <H3>PASOS</H3>
+                    </div>
+                    <ul class="borrar-list-style">
+                        <li>
+                            <div class="container-del-paso row">
+                                <h5> PASO 1</h5>
+                                <div class="col-8 descripcion-paso">
+                                    <span>No importa si hace frío o llueve, la sopa de pasta siempre es la mejor opción para la comida y la cena, pues tiene ese sabor casero e inigualable. Además, esta receta de sopa aguada es fácil, económica y muy rendidora, ¡será un éxito en casa!
+
+                                        Si no tienes tiempo para cocinar platillos elaborados, no te preocupes y prepara esta sopa aguada y acompaña con quesadillas, ¡está para chuparse los dedos!
+                                        
+                                        ¿Sabías qué? En México, la sopa de pasta también se conoce como sopa aguada y se prepara con sopa de fideos, de municiones o de letras
+                                    </span>
+                                </div>
+                                <div class="col-2">
+                                    <img src="../../Assets/Img/masa-pizza-t.jpg" class="imagen-paso" alt="imagenprincipal">
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
 
             <div class="col-12">
     
@@ -87,18 +158,15 @@
                 </div>
                 
             </div>
-              
-            
-
-
         </div>
         <div class="col-2">
 
         </div>
-        
     </main>
-    
+    <footer id="Footer"></footer>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script type="module" src="../../Functions(js)/AuthFunctions/AuthGuard.js"></script>
+    <script type="module" src="../../Compontents/Footer/Footer.js"></script>
+    <script type="module" src="../../Compontents/Header/Render/HeaderRender.js"></script>
 </body>
 </html>
