@@ -111,6 +111,7 @@ function ModificarNavLogin() {
                     <button class="dropdown-button"><i class="fa-solid fa-chevron-down"></i></button>
                     <div class="dropdown-content" style="display: none;">
                         <a href="../../Pages/PerfilUsuario/PerfilUsuario.html">Mi perfil</a>
+                        <a href="../../Pages/PostearOModReceta/CrearOModReceta.html">Crear receta</a>
                         <a href="#" onclick="logout();">Cerrar sesión</a>
                     </div>
                 </div>
