@@ -1,6 +1,6 @@
 function renderizarVistaPreviaReceta(receta) {
     // Crear el contenedor principal de la receta
-    const contenedorReceta = document.createElement('div');
+    const contenedorReceta = document.createElement('a');
     contenedorReceta.classList.add('contenedor-receta');
     contenedorReceta.dataset.recetaId = receta.id;
     // Crear el contenedor de imagen
@@ -49,6 +49,13 @@ function renderizarVistaPreviaReceta(receta) {
 
     // Agregar el título debajo de la imagen
     contenedorReceta.appendChild(titulo);
+
+    contenedorReceta.addEventListener('click', () => {
+        const recetaId = contenedorReceta.dataset.recetaId;
+        console.log(recetaId)
+        // Redirige a la página deseada con el ID de la receta como parámetro
+        window.location.href = `../../Pages/PostReceta/PostDeReceta.html?id=${recetaId}`;
+    });
 
     // Devolver el contenedor principal
     return contenedorReceta;

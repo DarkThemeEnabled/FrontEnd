@@ -5,7 +5,7 @@ function GenerarFooter() {
     <div class="container">
             <div class="row gy-4 gx-5">
                 <div class="col-lg-4 ">
-                    <img src="../../Assets/img/LogoNav.png" alt="LogoNav" >
+                    <img src="../../Assets/img/LogoNav.png" alt="LogoNav" class="imagen-footer" >
                     <p class="fs-1 text-black text-center fw-bold">GASTRONET</p>
                 </div>
                 <div class="col-3 ">
