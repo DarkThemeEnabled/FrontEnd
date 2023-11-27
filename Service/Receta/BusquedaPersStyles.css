@@ -1,17 +1,21 @@
 .contenedor-pagina {
     display: flex;
+    height: 50vw;
   }
   
+  #contenedor-otro {
+    flex: 2;
+    border-left: 2px solid #000;
+  }
+
   .contenedor-menu {
-    width: 25%;
-    padding: 20px;
+    flex: 2;
+    border-right: 2px solid #000; /* Línea de separación */
   }
   
   #contenedor-principal {
-    flex: 1;
-    padding: 20px; /* Ajusta según sea necesario */
-    box-sizing: border-box;
-    border-left: 2px solid #000; /* Línea de separación */
+    flex: 8;
+    padding: 20px; /* Ajusta según sea necesario */   
   }
 
   .superpuesto-categoria {
@@ -38,31 +42,39 @@
     max-width: 350px; /* Límite de ancho para la imagen */
     max-height: 240px; /* Límite de altura para la imagen */
     object-fit: cover;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 15px;
 }
 
-.fila-recetas {
+.contenedor-imagen img {
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal de recetas */
+/* Agrega esta regla para organizar las recetas en filas de dos */
+.contenedor-filas-recetas {
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Estilos para cada receta */
+/* Ajusta el ancho de las recetas para que ocupen el 48% del contenedor */
 .contenedor-receta {
-  margin-bottom: 20px; /* Espaciado inferior entre recetas */
-  width: calc(33.33% - 20px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 350px; /* Reduce el ancho para dejar espacio entre las recetas */
   box-sizing: border-box;
+  margin-left: 170px;
+  margin-bottom: 30px;
+}
+
+.contenedor-receta:hover {
+  transform: scale(1.1); /* Aumenta la escala en hover */
 }
 
 /*------------Menu de Busqueda-------------*/
-
-.filtro {
-  margin-top: 20px;
-}
-
-.filtro p {
-  cursor: pointer;
-  user-select: none;
-  margin: 0;
-}
 
 .filtro hr {
   border: 1px solid #000;
@@ -79,11 +91,11 @@
 }
 
 .opcion-filtro-item {
-  cursor: pointer;
   padding: 8px;
   border-radius: 4px;
   margin-bottom: 8px;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .opcion-filtro-item:hover {
@@ -96,4 +108,27 @@
 
 .opciones-filtro.mostrar-opciones {
   display: block;
+}
+
+.filtro p {
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+
+.filtro > p:hover {
+  cursor: default;
+}
+
+.opcion-filtro p {
+  cursor: pointer;
+}
+
+.opcion-filtro p:hover {
+  cursor: pointer;
+}
+
+.opcion-filtro-item input,
+.opcion-filtro-item label {
+  cursor: pointer;
 }

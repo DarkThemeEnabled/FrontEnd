@@ -2,7 +2,7 @@ function renderizarVistaPreviaReceta(receta) {
     // Crear el contenedor principal de la receta
     const contenedorReceta = document.createElement('div');
     contenedorReceta.classList.add('contenedor-receta');
-
+    contenedorReceta.dataset.recetaId = receta.id;
     // Crear el contenedor de imagen
     const contenedorImagen = document.createElement('div');
     contenedorImagen.classList.add('contenedor-imagen');
