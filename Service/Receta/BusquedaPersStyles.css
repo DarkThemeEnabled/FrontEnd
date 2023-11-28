@@ -68,6 +68,8 @@
   box-sizing: border-box;
   margin-left: 170px;
   margin-bottom: 30px;
+  text-decoration: none;
+  color: black;
 }
 
 .contenedor-receta:hover {
@@ -133,7 +135,7 @@
   cursor: pointer;
 }
 
-.titulo.centrado-debajo {
+.titulo {
   text-align: center;
   margin-top: 10px;
 }

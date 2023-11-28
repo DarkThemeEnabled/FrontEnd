@@ -5,7 +5,7 @@ async function GetRecetasByFilter(
 ) {
   try {
     // Construir la URL completa para la solicitud
-    const url = `https://localhost:7015/api/v1/Receta`;
+    const url = `https://localhost:7015/api/Receta`;
 
     // Configurar los parámetros para la solicitud
     const params = {

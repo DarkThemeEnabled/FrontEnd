@@ -4,7 +4,7 @@ import {renderizarVistaPreviaReceta} from '../../../Service/Receta/RenderizarVis
 
 
 async function CargarIngrediente(id) {
-    let recetasUsuario=await apiReceta.Get('lomo',null,null);
+    let recetasUsuario=await apiReceta.Get('milanesa',null,null);
     console.log(await apiReceta.Get('Pizza',null,null));
     const seccionContenedora = document.getElementById(id);
     seccionContenedora.innerHTML = '';

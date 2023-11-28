@@ -18,6 +18,12 @@
     margin: 2rem auto; /* Aumenta el margen superior para más espacio */
 }
 
+.form-container p a {
+    text-decoration: none;
+    color: #eaad16;
+}
+
+
 .btn {
     background-color: #eaad16;
     color: #fff;

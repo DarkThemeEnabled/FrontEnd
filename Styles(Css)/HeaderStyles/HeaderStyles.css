@@ -81,10 +81,10 @@
     float: right;
     width: 90px;
     border-radius: 15px;
-    padding: 5px;
     transition: background-color 0.2s ease;
     cursor:pointer;
     user-select: none;
+    padding: 3px 0px 3px 0px;
 }
 
 .nav-login a {

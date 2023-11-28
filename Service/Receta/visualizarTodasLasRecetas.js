@@ -25,13 +25,6 @@ async function visualizarTodasLasRecetas(tituloIngrediente, dificultad, categori
 
             // Agregar el contenedor de la receta al contenedor principal
             contenedorRecetas.appendChild(recetaElemento);
-
-            recetaElemento.addEventListener('click', () => {
-                const recetaId = recetaElemento.dataset.recetaId;
-                console.log(recetaId)
-                // Redirige a la página deseada con el ID de la receta como parámetro
-                window.location.href = `../../Pages/PostReceta/PostDeReceta.html?id$=${recetaId}`;
-            });
         });
 
         // Agregar el contenedor de recetas al contenedor principal
