@@ -79,3 +79,15 @@ h2 {
     transform: scale(1.1) translateX(-50%); /* Efecto de zoom centrado hacia adentro en el hover */
     opacity: 1; /* Hacer el texto completamente visible en el hover */
 }
+
+#botonBuscar
+{
+    background: none;
+    border: none;
+}
+
+#campoBusqueda
+{
+    border-radius: 25px;
+    padding-left: 15px;
+}
